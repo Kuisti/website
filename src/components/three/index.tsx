@@ -44,8 +44,8 @@ const Camera = (props: any) => {
     });
     useFrame(() => {
         setAngle(angle + 0.01);
-        const x = 7 * Math.cos(angle);
-        const z = 7 * Math.sin(angle);
+        const x = 9 * Math.cos(angle);
+        const z = 9 * Math.sin(angle);
 
         ref.current.position.x = x;
         ref.current.position.z = z;
@@ -67,8 +67,8 @@ const Three = () => {
                     color={"#FFF400"}
                     intensity={2}
                     castShadow position={[5, 4, 5]} 
-                    shadow-mapSize-width={1024}
-                    shadow-mapSize-height={1024}
+                    shadow-mapSize-width={2048}
+                    shadow-mapSize-height={2048}
                     shadow-camera-far={5000}
                     shadow-camera-left={-10}
                     shadow-camera-right={10}
@@ -76,7 +76,7 @@ const Three = () => {
                     shadow-camera-bottom={-10}
                 />
                 <Suspense fallback={<Box position={[0, 0, 0]} />}>
-                    <Model receiveShadow castShadow scale={[0.01, 0.01, 0.01]}/>   
+                    <Model receiveShadow castShadow scale={[0.02, 0.02, 0.02]}/>   
                 </Suspense>
                 <Plane receiveShadow scale={[30, 30]} rotation={[-Math.PI / 2, 0, 0]}/>
             </Canvas>
