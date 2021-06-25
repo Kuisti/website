@@ -1,0 +1,10 @@
+.countdown-container {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}

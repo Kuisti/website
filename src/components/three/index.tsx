@@ -38,10 +38,6 @@ const Camera = (props: any) => {
   const { setDefaultCamera } = useThree();
   // Make the camera known to the system
   useEffect(() => void setDefaultCamera(ref.current), []);
-  // Update it every frame
-  useEffect(() => {
-    console.log(typeof ref.current.lookAt);
-  });
   useFrame(() => {
     setAngle(angle + 0.01);
     const x = 9 * Math.cos(angle);
