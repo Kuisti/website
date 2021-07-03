@@ -1,12 +1,11 @@
-import * as THREE from 'three'
-import React, { useEffect, useRef } from 'react'
-import { useLoader, useFrame } from 'react-three-fiber'
+import React, { useRef } from 'react'
+import { useLoader } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import kuisti from './kuisti.glb';
 
 export default function Model(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useLoader(GLTFLoader, kuisti)
+  const { nodes, materials } = useLoader(GLTFLoader, kuisti)
 
   return (
     <group ref={group} {...props} dispose={null}>

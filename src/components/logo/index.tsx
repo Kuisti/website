@@ -5,7 +5,7 @@ import './style.css';
 const Logo = () => {
   return (
     <div className="logo-container">
-      <img src={logo} />
+      <img alt="logo" src={logo} />
     </div>
   )
 }
