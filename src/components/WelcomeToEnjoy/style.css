@@ -1,0 +1,22 @@
+@keyframes spin {
+  from {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateY(-360deg);
+  }
+}
+
+.tervetuloa-nauttimaan-container {
+  position: absolute;
+  left: 0;
+  bottom: 150px;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  animation: spin 10s linear infinite;
+}
